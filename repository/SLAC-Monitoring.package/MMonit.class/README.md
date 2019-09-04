@@ -5,6 +5,8 @@ A MMonit is class to query machines status to a MasterMonit server.
 
 . Some examples write in Transcript. So take a look there. 
 
+. foo bar 
+
 ---------- EXAMPLES --------------------
 
 ----- Start the service. Output stuff is in Transcript -------------------------
