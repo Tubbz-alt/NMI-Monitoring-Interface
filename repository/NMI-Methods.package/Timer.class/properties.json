@@ -1,0 +1,16 @@
+{
+	"category" : "NMI-Methods",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 9/3/2019 18:31",
+	"instvars" : [
+		"timeSlot",
+		"action",
+		"process" ],
+	"name" : "Timer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
