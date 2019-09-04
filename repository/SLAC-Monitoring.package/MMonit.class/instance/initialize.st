@@ -6,6 +6,8 @@ initialize
 	password := nil.
 	cookiePath := '~/.monit/cookie'.
 	webServer := nil.
+	"Mutually exclusive semaphore to access the data structures"
+	cacheMutex := Semaphore forMutualExclusion.
 	"timer" 
 	timer := 
 		Timer firingEach: (1e3)*60  action: [ 			

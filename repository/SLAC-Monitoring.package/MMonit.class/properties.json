@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "NM 9/4/2019 15:01",
+	"commentStamp" : "NM 9/4/2019 16:09",
 	"instvars" : [
 		"host",
 		"port",
@@ -14,7 +14,8 @@
 		"hostList",
 		"groupList",
 		"webServer",
-		"timer" ],
+		"timer",
+		"cacheMutex" ],
 	"name" : "MMonit",
 	"pools" : [
 		 ],

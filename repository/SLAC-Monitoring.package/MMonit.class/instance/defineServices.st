@@ -33,10 +33,16 @@ Client test access to the function recently defined.
 	].
 
 	"/query calls"
+	". this call is protected by a mutex to avoid that cache data reading happens
+		at the same time of MMonit data refresh. "
    ws addService:'/query' action: [ :req | 
-       |tmp  out targetStr re|
-	    Transcript show: req content. 
-
+		
+      |tmp  out targetStr re|
+	   Transcript show: req content. 
+	
+		"protect access to cached data with a Mutex Semaphore."
+     	self cacheMutex critical: [ 
+		
    	"default output to send in case nothing has been found"
 	   out :='[]'.
 "	   self halt."
@@ -59,8 +65,8 @@ Client test access to the function recently defined.
 					"compute the output json to return as answer"
 					out := self jsonOutSonHostsOfGroup: theGroup name.
 					].
-				
 				].
+			].
 
 	"send out the JSON string."
 	req send200Response: out.
