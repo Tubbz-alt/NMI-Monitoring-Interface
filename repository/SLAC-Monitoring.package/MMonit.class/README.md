@@ -7,6 +7,19 @@ A MMonit is class to query machines status to a MasterMonit server.
 
 ---------- EXAMPLES --------------------
 
+----- Start the service. Output stuff is in Transcript -------------------------
+
+mm := MMonit user: 'API' authFile: '/home/p/.monit/auth'.
+
+mm destroyWebServer .
+mm createWebServer .
+mm defineServices .
+
+"auto-update data from MMonit every 60 sec. "
+mm startLoopUpdateMMonit .
+
+-------------------------------------------------------------------------------------------
+
 --- Just to see something interactively
 MMonit printAllGroups .    
 ... 
