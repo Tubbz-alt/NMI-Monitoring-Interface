@@ -1,0 +1,4 @@
+accessing
+cookiePath
+
+	^ cookiePath

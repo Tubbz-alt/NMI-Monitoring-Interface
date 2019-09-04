@@ -1,0 +1,22 @@
+{
+	"category" : "SLAC-Monitoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 8/29/2019 10:47",
+	"instvars" : [
+		"host",
+		"port",
+		"user",
+		"password",
+		"cookiePath",
+		"hostList",
+		"groupList",
+		"webServer",
+		"timer" ],
+	"name" : "MMonit",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
