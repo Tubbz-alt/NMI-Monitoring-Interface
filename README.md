@@ -12,7 +12,7 @@ Grafana asks stuff to MMonit-object considering it a JSON datasource. MMonit-obj
 
 Grafana asks stuff to MMonit-object only when a user visit the proper dashboards / plugins. Or when a dashboard/plugin is kept open and gets updated automatically by Grafana.
 
-Here follows a video illustrating what has been achieved at 04-Sep-2019. <b>XXX TODO ADD LINK XXX</b>. The software is still very much in the experimental phase, it may go down, I may bring it down without notice. 
+Here follows a [video](https://www.youtube.com/watch?v=CA1ShjhlXCw) illustrating what has been achieved at 04-Sep-2019. The software is still very much in the experimental phase, it may go down, I may bring it down without notice. 
 
 ## How to try it out 
 
