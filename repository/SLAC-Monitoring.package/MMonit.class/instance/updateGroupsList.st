@@ -9,7 +9,7 @@ updateGroupsList
 	status := out processProxy exitStatus.
 	outString := out output. 
 	"Halt if we could not get the host list."
-	(status = 0) ifFalse: [ self halt: 'Could not get the list of hosts. ' ] . 
+	(status = 0) ifFalse: [ self error: 'Could not get the list of hosts. ' ] . 
 	"Parse the string and make a JSON object"
 	jOut := Json readFrom: outString utf8ToSqueak readStream.
 	
