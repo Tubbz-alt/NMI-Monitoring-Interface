@@ -20,6 +20,12 @@ mm defineServices .
 "auto-update data from MMonit every 60 sec. "
 mm startLoopUpdateMMonit .
 
+"Informative logging data are printed into Transcript window" 
+Transcript open.
+
+"stop autoupdating data from MMonit. "
+mm stopLoopUpdateMMonit. 
+
 -------------------------------------------------------------------------------------------
 
 --- Just to see something interactively
