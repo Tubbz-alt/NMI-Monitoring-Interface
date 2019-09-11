@@ -20,6 +20,25 @@ Here follows a [video](https://www.youtube.com/watch?v=CA1ShjhlXCw) illustrating
 
 test, test 2.
 
+## Installation and configuration 
+
+<li>
+<li> We suppose here the installation is done in our local machine <b>psmetric01</b>. 
+<li> <b>MMonit</b> is listening on XXXX  port XXXX
+<li> <b>Grafana</b> is waiting connection on XXX port XXXX
+</li>
+
+### To run the grafana-mmonit interface do 
+
+### To test the grafana-mmonit-interface is up and running from the shell do
+<code>
+foo@psmetric01 $> curl http://localhost:3001/test1
+Hello World
+</code> 
+
+
+
+
 
 
 
