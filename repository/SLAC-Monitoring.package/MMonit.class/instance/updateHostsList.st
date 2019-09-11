@@ -3,8 +3,10 @@ updateHostsList
 	"get the list of hosts in MMonit. Store the value into the instance variable. "
 
 	|cmd out status outString jOut tmp hostListTmp|
-	cmd := 'curl -b ~/.monit/cookie \
- 		  http://localhost:18020/status/hosts/list'.  
+	cmd := 'curl -b {1}/.monit/cookie \
+ 		  http://{2}:{3}/status/hosts/list' format: 
+		{  self homePath. self mmonitHost. self mmonitPort}. 
+		 
 	out := PipeableOSProcess waitForCommand: cmd. 
 	status := out processProxy exitStatus.
 	outString := out output. 

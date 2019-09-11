@@ -3,8 +3,10 @@ updateGroupsList
 	"Get the list of groups managed in MMonit. Store it into the instance variable. "
 	|cmd out status outString jOut tmp groupListTmp|
 
-	cmd := 'curl -b ~/.monit/cookie \
-		   http://localhost:18020/admin/groups/list'.
+	cmd := 'curl -b {1}/.monit/cookie \
+		   http://{2}:{3}/admin/groups/list' format: 
+		{ self homePath. self mmonitHost. self mmonitPort }.
+		
 	out := PipeableOSProcess waitForCommand: cmd. 
 	status := out processProxy exitStatus.
 	outString := out output. 

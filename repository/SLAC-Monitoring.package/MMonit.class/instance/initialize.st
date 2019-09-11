@@ -1,9 +1,15 @@
 initialize-release
 initialize
+	"coordinates of the local web server to whom Grafana connects"
 	host := 'localhost'.
-	port := '18020'.
+	port := '3001'.
+	"coordinates of the MMonit server" 
+	mmonitHost := 'nil'.
+	mmonitPort := 'nil'.
+	"user credentials to access to MMonit"
 	user := nil.
 	password := nil.
+	homePath := '/home/p'. 
 	cookiePath := '~/.monit/cookie'.
 	webServer := nil.
 	"Mutually exclusive semaphore to access the data structures"

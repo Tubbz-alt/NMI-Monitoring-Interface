@@ -11,7 +11,19 @@ test asdf .
 
 ----- Start the service. Output stuff is in Transcript -------------------------
 
-mm := MMonit user: 'API' authFile: '/home/p/.monit/auth'.
+"Simplified command for use in Nicola FBS machine"
+"mm := MMonit user: 'API' authFile: '/home/p/.monit/auth'. "
+
+"if necessary set a Proxy, as in this example. "
+HTTPSocket useProxyServerNamed: 'psproxy' port: 3128.
+
+"Remember to access git via HTTPS in from psmetric01, so to use the proxy."
+
+mm := MMonit user: 'API'  
+	homePath: '/reg/neh/home/nmingott'
+	authFile: '/reg/neh/home/nmingott/.monit/auth'
+	mmonitHost: 'localhost'
+	mmonitPort: '8020'.
 
 mm destroyWebServer .
 mm createWebServer .

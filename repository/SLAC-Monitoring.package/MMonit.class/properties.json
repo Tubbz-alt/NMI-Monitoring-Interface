@@ -4,12 +4,15 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "NM 9/10/2019 01:42",
+	"commentStamp" : "NM 9/10/2019 17:11",
 	"instvars" : [
 		"host",
 		"port",
+		"mmonitHost",
+		"mmonitPort",
 		"user",
 		"password",
+		"homePath",
 		"cookiePath",
 		"hostList",
 		"groupList",

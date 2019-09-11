@@ -6,11 +6,13 @@ authenticateUser: userString file: aFilename
 	diz := self getUserPasswordDictionary: aFilename.
 	passString := diz at: userString.
 	passString ifNil: [self halt: ('There was no password for user: ', userString) ].
-	cmd := 'curl -b ~/.monit/cookie \
+	cmd := 'curl -b {5}/.monit/cookie \
     	-d z_username={1} \
     	-d z_password={2}  \
     	-d z_csrf_protection=off \
-   http://localhost:18020/z_security_check' format: {userString. passString}. 
+   http://{3}:{4}/z_security_check' format: 
+		{userString. passString.
+			self mmonitHost. self mmonitPort. self homePath }. 
 	out := PipeableOSProcess waitForCommand: cmd. 
 	status := out processProxy exitStatus.
 	outString := out output. 
