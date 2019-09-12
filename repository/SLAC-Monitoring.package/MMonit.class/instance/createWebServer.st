@@ -1,7 +1,9 @@
 web-services
 createWebServer
 	"create the web service"
-	webServer := (WebServer reset default) listenOn: 3001 interface: #(127 0 0 1).
+	webServer := (WebServer reset default) 
+		listenOn: ((self port) asInteger)
+		interface: (((self host) splitOn: '.') collect: [:el | el asInteger] )  .
 	"logging to the Transcript "
 	webServer accessLog: Transcript . 
 	webServer

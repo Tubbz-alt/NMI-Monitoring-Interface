@@ -1,7 +1,8 @@
 initialize-release
 initialize
 	"coordinates of the local web server to whom Grafana connects"
-	host := 'localhost'.
+	"host := #(172 21 32 98)."
+	host := '172.21.32.98'.
 	port := '3001'.
 	"coordinates of the MMonit server" 
 	mmonitHost := 'nil'.
@@ -14,7 +15,7 @@ initialize
 	webServer := nil.
 	"Mutually exclusive semaphore to access the data structures"
 	cacheMutex := Semaphore forMutualExclusion.
-	"timer" 
+	"timer to update the data coming from MMOnit." 
 	timer := 
 		Timer firingEach: (1e3)*60  action: [ 			
 		 [ 

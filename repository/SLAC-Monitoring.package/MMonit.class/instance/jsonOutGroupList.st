@@ -22,7 +22,10 @@ jsonOutGroupList
 	out := OrderedCollection new. 
    self groupList do: [ :group| 
 		|tmp urlScriptedDashboard|
-		urlScriptedDashboard := '<a href="http://localhost:3000/dashboard/script/scripted2.js?orgId=1&group={1}&fullscreen&panelId=2">{2}</a>' format: {(group name). (group name)}. 
+		urlScriptedDashboard := '<a href="http://{3}:{4}/dashboard/script/scripted2.js?orgId=1&group={1}&fullscreen&panelId=2">{2}</a>' format: {
+		(group name). (group name).
+		self host. self port.
+		}. 
 		
 		tmp := OrderedCollection new.
 		tmp add: urlScriptedDashboard.
