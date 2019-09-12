@@ -25,7 +25,18 @@ jsonOutGroupList
 		urlScriptedDashboard := '<a href="http://{3}:{4}/dashboard/script/scripted2.js?orgId=1&group={1}&fullscreen&panelId=2">{2}</a>' format: {
 		(group name). (group name).
 		self host. self port.
+		}.
+		
+		"TEMPORARY: SLAC version, where we go through a proxy"
+				urlScriptedDashboard := '<a href=" http://psdm01.pcdsn:8300/system/grafana-dev/dashboard/script/scripted2.js?orgId=1&group={1}&fullscreen&panelId=2">{2}</a>' format: {
+		(group name). (group name)
 		}. 
+		
+				"TEMPORARY: SLAC version, where we go through a proxy"
+				urlScriptedDashboard := '<a href=" https://pswww.slac.stanford.edu/system/grafana-dev/dashboard/script/scripted2.js?orgId=1&group={1}&fullscreen&panelId=2">{2}</a>' format: {
+		(group name). (group name)
+		}. 
+		
 		
 		tmp := OrderedCollection new.
 		tmp add: urlScriptedDashboard.
