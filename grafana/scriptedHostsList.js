@@ -63,7 +63,7 @@ for (var i = 0; i < rows; i++) {
     "panels": [
     {
       "columns": [],
-      "datasource": "SimpleJson-Squeak-3001",
+      "datasource": "JSON-Monit-Feed:3001",
       "description": "This panel will be the base to automatize next ones. \n",
       "fontSize": "100%",
       "gridPos": {
