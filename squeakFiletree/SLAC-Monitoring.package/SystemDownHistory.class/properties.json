@@ -1,0 +1,14 @@
+{
+	"category" : "SLAC-Monitoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 9/30/2019 14:33",
+	"instvars" : [
+		 ],
+	"name" : "SystemDownHistory",
+	"pools" : [
+		 ],
+	"super" : "LimitedLinkedList",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "NMI-Methods",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 9/30/2019 11:54",
+	"instvars" : [
+		"capacity",
+		"data" ],
+	"name" : "LimitedLinkedList",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

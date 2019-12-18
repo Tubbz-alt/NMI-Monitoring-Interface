@@ -1,0 +1,18 @@
+{
+	"category" : "SLAC-Monitoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 9/17/2019 13:55",
+	"instvars" : [
+		"host",
+		"id",
+		"name",
+		"status",
+		"type" ],
+	"name" : "MonitHostService",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

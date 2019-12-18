@@ -1,0 +1,15 @@
+{
+	"category" : "SLAC-Monitoring",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NM 9/30/2019 14:10",
+	"instvars" : [
+		"time",
+		"downDiz" ],
+	"name" : "SystemDownStatus",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
